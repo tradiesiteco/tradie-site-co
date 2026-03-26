@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 
 const navLinks = [
+  { label: "Services", href: "#services" },
   { label: "How It Works", href: "#how-it-works" },
+  { label: "Results", href: "#results" },
   { label: "Pricing", href: "#pricing" },
-  { label: "About", href: "#about" },
-  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Navbar() {
@@ -22,15 +22,15 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${scrolled
-          ? "py-3 bg-slate-950/70 backdrop-blur-xl shadow-lg shadow-black/20"
+          ? "py-3 bg-[#020617]/80 backdrop-blur-xl border-b border-slate-800/50 shadow-lg shadow-black/20"
           : "py-5 bg-transparent"
         }`}
     >
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform duration-150">
-            TS
+          <div className="w-8 h-8 rounded-lg bg-brand-primary flex items-center justify-center text-slate-950 font-bold text-lg group-hover:scale-110 transition-transform duration-150">
+            T
           </div>
           <span className="text-white font-bold text-lg tracking-tight">
             Tradie Site Co
@@ -43,16 +43,29 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-150 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-500 after:transition-all after:duration-150 hover:after:w-full"
+              className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-150 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-brand-primary after:transition-all after:duration-150 hover:after:w-full"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold rounded-xl transition-all duration-150 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-primary text-slate-950 text-sm font-bold font-bold rounded-xl transition-all duration-150 hover:-translate-y-0.5"
           >
-            Claim Your AI-Powered Site
+            Get a Free Site
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.5}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
           </a>
         </div>
 
@@ -82,7 +95,7 @@ export default function Navbar() {
         className={`md:hidden overflow-hidden transition-all duration-200 ${mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
       >
-        <div className="px-6 pt-4 pb-6 flex flex-col gap-4 glass-strong mt-2 mx-4 rounded-2xl">
+        <div className="px-6 pt-4 pb-6 flex flex-col gap-4 bg-[#0f172a]/95 backdrop-blur-xl border border-slate-800/50 mt-2 mx-4 rounded-2xl">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -96,9 +109,9 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setMobileOpen(false)}
-            className="inline-flex items-center justify-center px-5 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold rounded-xl transition-all duration-150 mt-2"
+            className="inline-flex items-center justify-center px-5 py-3 bg-brand-primary text-slate-950 text-sm font-bold font-bold rounded-xl transition-all duration-150 mt-2"
           >
-            Claim Your AI-Powered Site
+            Get a Free Site
           </a>
         </div>
       </div>

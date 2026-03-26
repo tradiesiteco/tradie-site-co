@@ -28,12 +28,12 @@ export default function HowItWorks() {
         {/* Section Header */}
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-blue-400 font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-brand-primary font-semibold text-sm uppercase tracking-widest mb-4">
               How It Works
             </p>
             <h2 className="text-fluid-h2 text-white mb-4">
               Your New Website in
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">
                 {" "}
                 Three Steps
               </span>
@@ -51,11 +51,11 @@ export default function HowItWorks() {
             <ScrollReveal key={step.number} delay={index * 150}>
               <div className="group relative rounded-2xl glass glow-border p-8 transition-all duration-200 hover:-translate-y-1 flex flex-col items-center text-center h-full">
                 {/* Inner gradient glow */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
 
                 <div className="relative z-10 flex flex-col items-center">
                   {/* Step Number Circle */}
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-150 shadow-lg shadow-blue-500/20">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-150 shadow-lg shadow-brand-primary/20">
                     <span className="text-white font-bold text-lg">
                       {step.number}
                     </span>

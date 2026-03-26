@@ -19,14 +19,14 @@ export default function Footer() {
   return (
     <footer className="relative py-16 sm:py-24 border-t border-slate-800/50 bg-slate-950/50">
       {/* Background glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-blue-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-brand-primary/5 blur-[120px] pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16">
           {/* Branding */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center text-white font-bold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-brand-primary text-slate-950 text-sm font-bold">
                 TS
               </div>
               <span className="text-white font-bold text-lg tracking-tight">
@@ -49,10 +49,10 @@ export default function Footer() {
             <div className="space-y-4">
               <a
                 href="mailto:tradiesiteco@gmail.com"
-                className="flex items-center gap-3 text-slate-400 hover:text-blue-400 transition-colors duration-150 text-sm group"
+                className="flex items-center gap-3 text-slate-400 hover:text-brand-primary transition-colors duration-150 text-sm group"
               >
                 <svg
-                  className="w-4 h-4 text-slate-600 group-hover:text-blue-500 transition-colors"
+                  className="w-4 h-4 text-slate-600 group-hover:text-brand-primary transition-colors"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

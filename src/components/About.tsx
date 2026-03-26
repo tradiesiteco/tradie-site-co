@@ -63,12 +63,12 @@ export default function Portfolio() {
         <ScrollReveal>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 gap-6">
             <div>
-              <p className="text-blue-400 font-semibold text-sm uppercase tracking-widest mb-4">
+              <p className="text-brand-primary font-semibold text-sm uppercase tracking-widest mb-4">
                 Our Work
               </p>
               <h2 className="text-fluid-h2 text-white">
                 Websites That
-                <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">
                   {" "}
                   Win Jobs.
                 </span>
@@ -84,7 +84,7 @@ export default function Portfolio() {
             <div className="flex items-center gap-3 shrink-0">
               <button
                 onClick={() => scroll("left")}
-                className="w-12 h-12 rounded-xl border border-slate-700 hover:border-blue-500/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer"
+                className="w-12 h-12 rounded-xl border border-slate-700 hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer"
                 aria-label="Scroll left"
               >
                 <svg
@@ -103,7 +103,7 @@ export default function Portfolio() {
               </button>
               <button
                 onClick={() => scroll("right")}
-                className="w-12 h-12 rounded-xl border border-slate-700 hover:border-blue-500/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer"
+                className="w-12 h-12 rounded-xl border border-slate-700 hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer"
                 aria-label="Scroll right"
               >
                 <svg
@@ -152,14 +152,14 @@ export default function Portfolio() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
 
                     {/* Trade badge */}
-                    <div className="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-blue-500 text-white text-xs font-bold uppercase tracking-wider shadow-lg">
+                    <div className="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-brand-primary text-slate-950 font-bold text-xs font-bold uppercase tracking-wider shadow-lg">
                       {project.trade}
                     </div>
                   </div>
 
                   {/* Info */}
                   <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-blue-400 transition-colors duration-150">
+                    <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-brand-primary transition-colors duration-150">
                       {project.title}
                     </h3>
                     <p className="text-slate-400 text-sm leading-relaxed">

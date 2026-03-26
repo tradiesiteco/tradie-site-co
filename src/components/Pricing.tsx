@@ -15,18 +15,18 @@ export default function Pricing() {
   return (
     <section id="pricing" className="relative py-24 sm:py-32">
       {/* Background accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-blue-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-brand-primary/5 blur-[120px] pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-blue-400 font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-brand-primary font-semibold text-sm uppercase tracking-widest mb-4">
               Simple Pricing
             </p>
             <h2 className="text-fluid-h2 text-white mb-4">
               One Plan.
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">
                 {" "}
                 Everything Included.
               </span>
@@ -42,14 +42,14 @@ export default function Pricing() {
           <div>
             <div className="relative group rounded-3xl glass glow-border p-10 transition-all duration-200">
               {/* Inner gradient */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/5 to-cyan-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
 
               <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10">
                 {/* Left column — Plan info & CTA */}
                 <div className="flex flex-col">
                   {/* Plan label */}
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6 w-fit">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-primary/10 text-brand-primary text-xs font-semibold uppercase tracking-wider mb-6 w-fit">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-primary" />
                     Growth Plan
                   </div>
 
@@ -68,7 +68,7 @@ export default function Pricing() {
                     {/* CTA */}
                     <a
                       href="#contact"
-                      className="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold rounded-xl transition-all duration-150 hover:-translate-y-0.5"
+                      className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-brand-primary hover:bg-[#00e692] text-slate-950 text-sm font-bold rounded-xl transition-all duration-150 hover:-translate-y-0.5"
                     >
                       Claim Your AI-Powered Site
                       <svg
@@ -100,7 +100,7 @@ export default function Pricing() {
                     {included.map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <svg
-                          className="w-5 h-5 text-blue-400 shrink-0 mt-0.5"
+                          className="w-5 h-5 text-brand-primary shrink-0 mt-0.5"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >

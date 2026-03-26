@@ -43,12 +43,12 @@ export default function Contact() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-16">
           <ScrollReveal>
-            <p className="text-blue-400 font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-brand-primary font-semibold text-sm uppercase tracking-widest mb-4">
               Get Started
             </p>
             <h2 className="text-fluid-h2 text-white mb-4">
               Ready to
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">
                 {" "}
                 Dominate
               </span>{" "}
@@ -72,14 +72,14 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 rounded-xl bg-slate-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-150 text-sm"
+                  className="w-full px-5 py-4 rounded-xl bg-slate-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all duration-150 text-sm"
                 />
                 <select
                   name="trade"
                   required
                   value={formData.trade}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 rounded-xl bg-slate-900/80 border border-slate-700 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-150 text-sm appearance-none cursor-pointer"
+                  className="w-full px-5 py-4 rounded-xl bg-slate-900/80 border border-slate-700 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all duration-150 text-sm appearance-none cursor-pointer"
                   style={{
                     backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
                     backgroundPosition: "right 1rem center",
@@ -104,7 +104,7 @@ export default function Contact() {
                   required
                   value={formData.suburb}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 rounded-xl bg-slate-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-150 text-sm"
+                  className="w-full px-5 py-4 rounded-xl bg-slate-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all duration-150 text-sm"
                 />
                 <input
                   type="tel"
@@ -113,13 +113,13 @@ export default function Contact() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 rounded-xl bg-slate-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-150 text-sm"
+                  className="w-full px-5 py-4 rounded-xl bg-slate-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all duration-150 text-sm"
                 />
               </div>
               <div className="mt-8">
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-150 hover:-translate-y-0.5 text-sm cursor-pointer shadow-lg shadow-blue-500/20"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-brand-primary hover:bg-[#00e692] text-slate-950 font-bold rounded-xl transition-all duration-150 hover:-translate-y-0.5 text-sm cursor-pointer shadow-lg shadow-brand-primary/20"
                 >
                   Claim Your AI-Powered Site
                   <svg
@@ -140,9 +140,9 @@ export default function Contact() {
             </form>
           ) : (
             <div className="rounded-2xl glass p-12 text-center max-w-3xl mx-auto">
-              <div className="w-16 h-16 mx-auto rounded-full bg-blue-500/10 flex items-center justify-center mb-4">
+              <div className="w-16 h-16 mx-auto rounded-full bg-brand-primary/10 flex items-center justify-center mb-4">
                 <svg
-                  className="w-8 h-8 text-blue-400"
+                  className="w-8 h-8 text-brand-primary"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

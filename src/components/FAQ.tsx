@@ -44,12 +44,12 @@ export default function FAQ() {
         {/* Section Header */}
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-blue-400 font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-brand-primary font-semibold text-sm uppercase tracking-widest mb-4">
               FAQ
             </p>
             <h2 className="text-fluid-h2 text-white mb-4">
               Got
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">
                 {" "}
                 Questions?
               </span>
@@ -70,7 +70,7 @@ export default function FAQ() {
                   className="w-full flex items-center justify-between px-7 py-5 text-left cursor-pointer group"
                   aria-expanded={openIndex === index}
                 >
-                  <span className="text-white font-medium text-base pr-4 group-hover:text-blue-400 transition-colors duration-150">
+                  <span className="text-white font-medium text-base pr-4 group-hover:text-brand-primary transition-colors duration-150">
                     {faq.question}
                   </span>
                   <svg
