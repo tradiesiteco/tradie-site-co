@@ -8,37 +8,37 @@ const projects = [
   {
     title: "Melbourne Elite Plumbing",
     trade: "Plumber",
-    image: "/Users/ryanfrench/.gemini/antigravity/brain/98b07070-dd1f-46d0-859c-2338b23026de/plumber_website_mockup_1774506959689.png",
+    image: "/portfolio/plumber.png",
     description: "Full website build with 24/7 booking system and local SEO.",
   },
   {
     title: "Spark Pro Electrical",
     trade: "Electrician",
-    image: "/Users/ryanfrench/.gemini/antigravity/brain/98b07070-dd1f-46d0-859c-2338b23026de/electrician_website_mockup_1774506972238.png",
+    image: "/portfolio/electrician.png",
     description: "Conversion-focused site with emergency callout integration.",
   },
   {
     title: "Apex Constructions",
     trade: "Builder",
-    image: "/Users/ryanfrench/.gemini/antigravity/brain/98b07070-dd1f-46d0-859c-2338b23026de/builder_website_mockup_1774506987833.png",
+    image: "/portfolio/builder.png",
     description: "Portfolio showcase with project galleries and quote forms.",
   },
   {
     title: "Verdant Edge Landscapes",
     trade: "Landscaper",
-    image: "/Users/ryanfrench/.gemini/antigravity/brain/98b07070-dd1f-46d0-859c-2338b23026de/landscaper_website_mockup_1774507004679.png",
+    image: "/portfolio/landscaper.png",
     description: "Image-rich design with before/after project sliders.",
   },
   {
     title: "Summit Roofing Co",
     trade: "Roofer",
-    image: "/Users/ryanfrench/.gemini/antigravity/brain/98b07070-dd1f-46d0-859c-2338b23026de/roofer_website_mockup_1774507022171.png",
+    image: "/portfolio/roofer.png",
     description: "Lead-generation site with instant quote calculator.",
   },
   {
     title: "Precision Painters",
     trade: "Painter",
-    image: "/Users/ryanfrench/.gemini/antigravity/brain/98b07070-dd1f-46d0-859c-2338b23026de/painter_website_mockup_1774507037887.png",
+    image: "/portfolio/painter.png",
     description: "Elegant portfolio with colour palette inspiration tools.",
   },
 ];
