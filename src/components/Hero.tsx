@@ -9,6 +9,34 @@ const rotatingWords = [
   "look world-class.",
 ];
 
+/**
+ * Counter-up component for stats
+ */
+function Counter({ target, duration = 2000, suffix = "" }: { target: number; duration?: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const end = target;
+    const range = end - start;
+    let current = start;
+    const increment = end > start ? 1 : -1;
+    const stepTime = Math.abs(Math.floor(duration / range));
+    
+    const timer = setInterval(() => {
+      current += increment;
+      setCount(current);
+      if (current === end) {
+        clearInterval(timer);
+      }
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, [target, duration]);
+
+  return <span>{count}{suffix}</span>;
+}
+
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -94,7 +122,9 @@ export default function Hero() {
         {/* Statistics Block from Screenshot */}
         <div className="animate-fade-in flex flex-wrap items-center justify-center gap-12 sm:gap-20 py-8 border-t border-slate-800/50">
           <div className="text-center group">
-            <p className="text-4xl font-extrabold text-white mb-2 group-hover:text-brand-primary transition-colors">100%</p>
+            <p className="text-4xl font-extrabold text-white mb-2 group-hover:text-brand-primary transition-colors">
+              <Counter target={100} suffix="%" />
+            </p>
             <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">Custom Built Sites</p>
           </div>
 
@@ -108,7 +138,9 @@ export default function Hero() {
           <div className="hidden sm:block w-px h-12 bg-slate-800/50" />
 
           <div className="text-center group">
-            <p className="text-4xl font-extrabold text-white mb-2 group-hover:text-brand-primary transition-colors">7 days</p>
+            <p className="text-4xl font-extrabold text-white mb-2 group-hover:text-brand-primary transition-colors">
+              <Counter target={7} suffix=" days" />
+            </p>
             <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">Design to Launch</p>
           </div>
         </div>

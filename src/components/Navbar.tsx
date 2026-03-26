@@ -109,7 +109,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setMobileOpen(false)}
-            className="inline-flex items-center justify-center px-5 py-3 bg-brand-primary text-slate-950 text-sm font-bold font-bold rounded-xl transition-all duration-150 mt-2"
+            className="inline-flex items-center justify-center px-5 py-3 bg-brand-primary text-slate-950 text-sm font-bold rounded-xl transition-all duration-150 mt-2 hover:bg-[#00e692]"
           >
             Get a Free Site
           </a>
