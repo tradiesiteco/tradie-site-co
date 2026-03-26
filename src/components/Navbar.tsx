@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const navLinks = [
   { label: "Services", href: "#services" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "Results", href: "#results" },
+  { label: "Our Work", href: "#our-work" },
   { label: "Pricing", href: "#pricing" },
 ];
 
@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${scrolled
-          ? "py-3 bg-[#020617]/80 backdrop-blur-xl border-b border-slate-800/50 shadow-lg shadow-black/20"
+          ? "py-3 bg-[#020617]/80 backdrop-blur-xl shadow-lg shadow-black/20"
           : "py-5 bg-transparent"
         }`}
     >

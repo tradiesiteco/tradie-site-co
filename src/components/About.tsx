@@ -57,38 +57,36 @@ export default function Portfolio() {
   };
 
   return (
-    <section id="about" className="relative py-24 sm:py-32">
+    <section id="our-work" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <ScrollReveal>
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 gap-6">
-            <div>
-              <p className="text-brand-primary font-semibold text-sm uppercase tracking-widest mb-4">
-                Our Work
-              </p>
-              <h2 className="text-fluid-h2 text-white">
-                Websites That
-                <span className="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">
-                  {" "}
-                  Win Jobs.
-                </span>
-              </h2>
-              <p className="text-fluid-body text-slate-400 max-w-xl mt-4">
-                Real sites we&apos;ve built for real trades businesses across
-                Melbourne. Every one designed to convert visitors into paying
-                customers.
-              </p>
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-brand-primary/10 to-brand-secondary/10 border border-brand-primary/20 text-brand-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-4">
+              Portfolio
             </div>
+            <h2 className="text-fluid-h2 text-white mb-6">
+              Websites That
+              <span className="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">
+                {" "}
+                Win Jobs.
+              </span>
+            </h2>
+            <p className="text-fluid-body text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+              Real sites we&apos;ve built for real trades businesses across
+              Melbourne. Every one designed to convert visitors into paying
+              customers.
+            </p>
 
-            {/* Navigation Arrows */}
-            <div className="flex items-center gap-3 shrink-0">
+            {/* Navigation Arrows - Centered Below */}
+            <div className="flex items-center justify-center gap-4">
               <button
                 onClick={() => scroll("left")}
-                className="w-12 h-12 rounded-xl border border-slate-700 hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer"
+                className="w-12 h-12 rounded-xl border border-slate-700 hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer group/arrow"
                 aria-label="Scroll left"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-5 h-5 transition-transform duration-150 group-hover/arrow:-translate-x-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -103,11 +101,11 @@ export default function Portfolio() {
               </button>
               <button
                 onClick={() => scroll("right")}
-                className="w-12 h-12 rounded-xl border border-slate-700 hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer"
+                className="w-12 h-12 rounded-xl border border-slate-700 hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer group/arrow"
                 aria-label="Scroll right"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-5 h-5 transition-transform duration-150 group-hover/arrow:translate-x-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -145,14 +143,14 @@ export default function Portfolio() {
                       src={project.image}
                       alt={`${project.title} website`}
                       fill
-                      className="object-cover object-top transition-transform duration-150 group-hover:scale-105"
+                      className="object-cover object-top transition-transform duration-150"
                       sizes="(max-width: 640px) 100vw, 33vw"
                     />
                     {/* Overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
 
-                    {/* Trade badge */}
-                    <div className="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-brand-primary text-slate-950 font-bold text-xs font-bold uppercase tracking-wider shadow-lg">
+                    {/* Trade pill badge */}
+                    <div className="absolute top-4 left-4 px-4 py-1.5 rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary text-slate-950 font-bold text-[10px] uppercase tracking-widest shadow-lg backdrop-blur-md">
                       {project.trade}
                     </div>
                   </div>

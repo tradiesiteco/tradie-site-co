@@ -23,9 +23,12 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-[#020617]">
       {/* Background gradient effects */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Primary radial glow - Top Center as in screenshot */}
-        <div className="absolute top-[-30%] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] rounded-full bg-brand-primary/20 blur-[150px]" />
-        
+        {/* Primary radial glow - Wider and Brighter version of original layout */}
+        <div className="absolute top-[-25%] left-1/2 -translate-x-1/2 w-[1300px] h-[1000px] rounded-full bg-brand-primary/30 blur-[160px]" />
+
+        {/* Secondary accent glow - Original layout */}
+        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-brand-secondary/10 blur-[100px]" />
+
         {/* Grid overlay */}
         <div
           className="absolute inset-0 opacity-[0.03]"
@@ -94,9 +97,9 @@ export default function Hero() {
             <p className="text-4xl font-extrabold text-white mb-2 group-hover:text-brand-primary transition-colors">100%</p>
             <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">Custom Built Sites</p>
           </div>
-          
+
           <div className="hidden sm:block w-px h-12 bg-slate-800/50" />
-          
+
           <div className="text-center group">
             <p className="text-4xl font-extrabold text-white mb-2 group-hover:text-brand-primary transition-colors">Zero</p>
             <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">Pre-Made Templates</p>
@@ -111,8 +114,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#020617] to-transparent" />
+      {/* Bottom gradient fade - starts around stats block */}
+      <div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-[#020617] via-[#020617]/90 to-transparent" />
     </section>
   );
 }

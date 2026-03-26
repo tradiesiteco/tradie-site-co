@@ -43,9 +43,9 @@ export default function Contact() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-16">
           <ScrollReveal>
-            <p className="text-brand-primary font-semibold text-sm uppercase tracking-widest mb-4">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-brand-primary/10 to-brand-secondary/10 border border-brand-primary/20 text-brand-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-4">
               Get Started
-            </p>
+            </div>
             <h2 className="text-fluid-h2 text-white mb-4">
               Ready to
               <span className="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">
