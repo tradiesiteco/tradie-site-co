@@ -10,6 +10,15 @@ const rotatingWords = [
 ];
 
 export default function Hero() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % rotatingWords.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-[#020617]">
       {/* Background gradient effects */}
@@ -33,7 +42,14 @@ export default function Hero() {
         <h1 className="text-fluid-display text-white animate-slide-up mb-8 font-extrabold tracking-tight">
           Your trade deserves to
           <br />
-          stand out online.
+          <span className="inline-block overflow-hidden h-[1.3em] align-bottom relative">
+            <span
+              key={currentIndex}
+              className="inline-block bg-gradient-to-r from-brand-primary via-brand-primary/90 to-brand-secondary bg-clip-text text-transparent animate-slide-up-in"
+            >
+              {rotatingWords[currentIndex]}
+            </span>
+          </span>
         </h1>
 
         {/* Subheadline */}
