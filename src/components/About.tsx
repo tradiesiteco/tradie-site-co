@@ -77,54 +77,52 @@ export default function Portfolio() {
               Melbourne. Every one designed to convert visitors into paying
               customers.
             </p>
-
-            {/* Navigation Arrows - Centered Below */}
-            <div className="flex items-center justify-center gap-4">
-              <button
-                onClick={() => scroll("left")}
-                className="w-12 h-12 rounded-xl border border-slate-700 hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer group/arrow"
-                aria-label="Scroll left"
-              >
-                <svg
-                  className="w-5 h-5 transition-transform duration-150 group-hover/arrow:-translate-x-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-              </button>
-              <button
-                onClick={() => scroll("right")}
-                className="w-12 h-12 rounded-xl border border-slate-700 hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer group/arrow"
-                aria-label="Scroll right"
-              >
-                <svg
-                  className="w-5 h-5 transition-transform duration-150 group-hover/arrow:translate-x-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-            </div>
           </div>
         </ScrollReveal>
       </div>
 
       {/* Scrollable Portfolio Slider */}
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-6 group/slider">
+        {/* Navigation Arrows - Ends of Slider */}
+        <button
+          onClick={() => scroll("left")}
+          className="absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-xl border border-slate-700 bg-slate-950/50 backdrop-blur-md hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer group/arrow hidden md:flex"
+          aria-label="Scroll left"
+        >
+          <svg
+            className="w-5 h-5 transition-transform duration-150 group-hover/arrow:-translate-x-0.5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+        <button
+          onClick={() => scroll("right")}
+          className="absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-xl border border-slate-700 bg-slate-950/50 backdrop-blur-md hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer group/arrow hidden md:flex"
+          aria-label="Scroll right"
+        >
+          <svg
+            className="w-5 h-5 transition-transform duration-150 group-hover/arrow:translate-x-0.5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+
         <ScrollReveal delay={100}>
           <div
             ref={scrollRef}
