@@ -8,37 +8,37 @@ const projects = [
   {
     title: "Melbourne Elite Plumbing",
     trade: "Plumber",
-    image: "/portfolio/plumber_new.png",
+    image: "/portfolio/plumber_old.png",
     description: "Full website build with 24/7 booking system and local SEO.",
   },
   {
     title: "Spark Pro Electrical",
     trade: "Electrician",
-    image: "/portfolio/electrician_new.png",
+    image: "/portfolio/electrician_old.png",
     description: "Conversion-focused site with emergency callout integration.",
   },
   {
     title: "Apex Constructions",
     trade: "Builder",
-    image: "/portfolio/builder_new.png",
+    image: "/portfolio/builder_old.png",
     description: "Portfolio showcase with project galleries and quote forms.",
   },
   {
     title: "Verdant Edge Landscapes",
     trade: "Landscaper",
-    image: "/portfolio/landscaper_new.png",
+    image: "/portfolio/landscaper_old.png",
     description: "Image-rich design with before/after project sliders.",
   },
   {
     title: "Summit Roofing Co",
     trade: "Roofer",
-    image: "/portfolio/roofer_new.png",
+    image: "/portfolio/roofer_old.png",
     description: "Lead-generation site with instant quote calculator.",
   },
   {
     title: "Precision Painters",
     trade: "Painter",
-    image: "/portfolio/painter_new.png",
+    image: "/portfolio/painter_old.png",
     description: "Elegant portfolio with colour palette inspiration tools.",
   },
 ];
