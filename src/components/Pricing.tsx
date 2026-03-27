@@ -71,19 +71,6 @@ export default function Pricing() {
                       className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-brand-primary hover:bg-[#00e692] text-slate-950 text-sm font-bold rounded-xl transition-all duration-150 hover:-translate-y-0.5"
                     >
                       Claim Your AI-Powered Site
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
-                      </svg>
                     </a>
                     <p className="text-slate-600 text-xs text-center mt-3">
                       No lock-in contracts. Cancel anytime.

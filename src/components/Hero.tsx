@@ -97,19 +97,6 @@ export default function Hero() {
             className="group inline-flex items-center gap-2 px-8 py-4 bg-brand-primary hover:bg-[#00e692] text-slate-950 font-bold rounded-xl transition-all duration-150 hover:-translate-y-0.5"
           >
             Get My Free Website
-            <svg
-              className="w-5 h-5 transition-transform duration-150 group-hover:translate-x-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2.5}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
           </a>
           <a
             href="#how-it-works"

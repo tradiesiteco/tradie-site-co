@@ -53,19 +53,6 @@ export default function Navbar() {
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-primary text-slate-950 text-sm font-bold font-bold rounded-xl transition-all duration-150 hover:-translate-y-0.5"
           >
             Get a Free Site
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2.5}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
           </a>
         </div>
 
