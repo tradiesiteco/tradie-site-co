@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -46,9 +46,34 @@ const projects = [
 export default function Portfolio() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const checkScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 20);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 20);
+    }
+  };
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (el) {
+      el.addEventListener("scroll", checkScroll);
+      // Wait a bit for the layout to settle/images to load
+      setTimeout(checkScroll, 100);
+      window.addEventListener("resize", checkScroll);
+      return () => {
+        el.removeEventListener("scroll", checkScroll);
+        window.removeEventListener("resize", checkScroll);
+      };
+    }
+  }, []);
+
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const amount = scrollRef.current.offsetWidth * 0.6;
+      const amount = scrollRef.current.offsetWidth * 0.8;
       scrollRef.current.scrollBy({
         left: direction === "left" ? -amount : amount,
         behavior: "smooth",
@@ -86,11 +111,11 @@ export default function Portfolio() {
         {/* Navigation Arrows - Ends of Slider */}
         <button
           onClick={() => scroll("left")}
-          className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-xl border border-slate-700 bg-slate-950/50 backdrop-blur-md hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer group/arrow hidden md:flex"
+          className={`absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-xl border border-slate-700 bg-slate-950/50 backdrop-blur-md hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300 hover:bg-white/5 cursor-pointer group/arrow hidden md:flex ${canScrollLeft ? "opacity-100 scale-100" : "opacity-0 scale-90 pointer-events-none"}`}
           aria-label="Scroll left"
         >
           <svg
-            className="w-5 h-5 transition-transform duration-150"
+            className="w-5 h-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -105,11 +130,11 @@ export default function Portfolio() {
         </button>
         <button
           onClick={() => scroll("right")}
-          className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-xl border border-slate-700 bg-slate-950/50 backdrop-blur-md hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer group/arrow hidden md:flex"
+          className={`absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-xl border border-slate-700 bg-slate-950/50 backdrop-blur-md hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300 hover:bg-white/5 cursor-pointer group/arrow hidden md:flex ${canScrollRight ? "opacity-100 scale-100" : "opacity-0 scale-90 pointer-events-none"}`}
           aria-label="Scroll right"
         >
           <svg
-            className="w-5 h-5 transition-transform duration-150"
+            className="w-5 h-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -132,7 +157,7 @@ export default function Portfolio() {
             {projects.map((project) => (
               <div
                 key={project.title}
-                className="group relative shrink-0 w-[calc(33.333%-1rem)] min-w-[300px] snap-start"
+                className="group relative shrink-0 w-[85%] sm:w-[calc(33.333%-1rem)] snap-start"
               >
                 <div className="rounded-2xl overflow-hidden glass glow-border transition-all duration-200 hover:-translate-y-1 h-full flex flex-col">
                   {/* Image */}
