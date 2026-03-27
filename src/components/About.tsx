@@ -82,15 +82,15 @@ export default function Portfolio() {
       </div>
 
       {/* Scrollable Portfolio Slider */}
-      <div className="relative mx-auto max-w-7xl px-6 group/slider">
+      <div className="relative mx-auto max-w-[1400px] px-6 sm:px-20 group/slider">
         {/* Navigation Arrows - Ends of Slider */}
         <button
           onClick={() => scroll("left")}
-          className="absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-xl border border-slate-700 bg-slate-950/50 backdrop-blur-md hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer group/arrow hidden md:flex"
+          className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-xl border border-slate-700 bg-slate-950/50 backdrop-blur-md hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer group/arrow hidden md:flex"
           aria-label="Scroll left"
         >
           <svg
-            className="w-5 h-5 transition-transform duration-150 group-hover/arrow:-translate-x-0.5"
+            className="w-5 h-5 transition-transform duration-150"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -105,11 +105,11 @@ export default function Portfolio() {
         </button>
         <button
           onClick={() => scroll("right")}
-          className="absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-xl border border-slate-700 bg-slate-950/50 backdrop-blur-md hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer group/arrow hidden md:flex"
+          className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-xl border border-slate-700 bg-slate-950/50 backdrop-blur-md hover:border-brand-primary/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-150 hover:bg-white/5 cursor-pointer group/arrow hidden md:flex"
           aria-label="Scroll right"
         >
           <svg
-            className="w-5 h-5 transition-transform duration-150 group-hover/arrow:translate-x-0.5"
+            className="w-5 h-5 transition-transform duration-150"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
