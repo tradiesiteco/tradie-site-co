@@ -39,7 +39,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 sm:py-32">
+    <section id="contact" className="relative py-24 sm:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-16">
           <ScrollReveal>

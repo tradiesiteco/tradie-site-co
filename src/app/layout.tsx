@@ -72,7 +72,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={plusJakarta.variable}>
-      <body className="font-sans">
+      <body className="font-sans overflow-x-hidden">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

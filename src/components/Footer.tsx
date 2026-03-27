@@ -17,7 +17,7 @@ const serviceAreas = [
 
 export default function Footer() {
   return (
-    <footer className="relative py-16 sm:py-24 border-t border-slate-800/50 bg-slate-950/50">
+    <footer className="relative py-16 sm:py-24 border-t border-slate-800/50 bg-slate-950/50 overflow-hidden">
       {/* Background glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-brand-primary/5 blur-[120px] pointer-events-none" />
 
