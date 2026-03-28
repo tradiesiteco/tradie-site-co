@@ -26,7 +26,7 @@ export default function Footer() {
           {/* Branding */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-brand-primary flex items-center justify-center text-slate-950 font-bold text-lg group-hover:scale-110 transition-transform duration-150">
+              <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-slate-950 font-[family-name:var(--font-archivo-black)] text-[26px]">
                 T
               </div>
               <span className="text-white font-bold text-lg tracking-tight">
