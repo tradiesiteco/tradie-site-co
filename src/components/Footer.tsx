@@ -26,7 +26,7 @@ export default function Footer() {
           {/* Branding */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-slate-950 font-[family-name:var(--font-archivo-black)] text-[26px]">
+              <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-slate-950 font-[family-name:var(--font-bungee)] text-[22px]">
                 T
               </div>
               <span className="text-white font-bold text-lg tracking-tight">
@@ -37,7 +37,7 @@ export default function Footer() {
               Agency-quality websites built for Melbourne trades. enterprise-grade AI meets local expertise to help you dominate your local market.
             </p>
             <div className="flex items-center gap-4">
-               {/* Quick Links could go here if needed, or social icons */}
+              {/* Quick Links could go here if needed, or social icons */}
             </div>
           </div>
 

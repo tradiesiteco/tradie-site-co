@@ -22,14 +22,14 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${scrolled
-          ? "py-3 bg-[#020617]/80 backdrop-blur-xl shadow-lg shadow-black/20"
-          : "py-5 bg-transparent"
+        ? "py-3 bg-[#020617]/80 backdrop-blur-xl shadow-lg shadow-black/20"
+        : "py-5 bg-transparent"
         }`}
     >
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-slate-950 font-[family-name:var(--font-archivo-black)] text-[26px]">
+          <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-slate-950 font-[family-name:var(--font-bungee)] text-[22px]">
             T
           </div>
           <span className="text-white font-bold text-lg tracking-tight">

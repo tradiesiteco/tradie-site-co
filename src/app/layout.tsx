@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Archivo_Black } from "next/font/google";
+import { Plus_Jakarta_Sans, Archivo_Black, Bungee } from "next/font/google";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -11,6 +11,12 @@ const archivoBlack = Archivo_Black({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-archivo-black",
+});
+
+const bungee = Bungee({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bungee",
 });
 
 export const metadata: Metadata = {
@@ -77,7 +83,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${plusJakarta.variable} ${archivoBlack.variable}`}>
+    <html lang="en" className={`${plusJakarta.variable} ${archivoBlack.variable} ${bungee.variable}`}>
       <body className="font-sans overflow-x-hidden">
         <script
           type="application/ld+json"
